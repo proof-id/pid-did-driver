@@ -1,6 +1,3 @@
-[![](https://user-images.githubusercontent.com/39338561/122415864-8d6a7c00-cf88-11eb-846f-a98a936f88da.png)
-](https://pid.io)
-
 # ProofID DID Driver
 
 This driver resolves a given ProofID [Decentralized Identifier](https://w3c-ccg.github.io/did-spec/) to the associated DID Document.
