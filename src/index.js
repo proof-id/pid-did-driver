@@ -1,5 +1,5 @@
 const express = require('express');
-const { Did, init } = require('@kiltprotocol/sdk-js');
+const { Did, init } = require('@proofid/pid-sdk-lib');
 const fetch = require('node-fetch');
 const { PORT } = require('./config');
 const { URI_DID } = require('./consts');
@@ -26,7 +26,7 @@ async function start() {
           throw new Error('DID not found');
         }
         if (!isUrlFetchable(storageLocation)) {
-          // workaround to mitigate the absence of the protocol scheme in the storageLocation string of KILT DID objects that were stored on-chain *via the demo-client*
+          // workaround to mitigate the absence of the protocol scheme in the storageLocation string of ProofID DID objects that were stored on-chain *via the demo-client*
           storageLocation = `https:${storageLocation}`;
         }
         console.info('Fetching DID Document...');
@@ -59,7 +59,7 @@ async function start() {
   });
 
   driver.listen(PORT, () => {
-    console.info(`🚀  KILT Resolver driver active on port ${PORT}...`);
+    console.info(`🚀  ProofID Resolver driver active on port ${PORT}...`);
   });
 }
 

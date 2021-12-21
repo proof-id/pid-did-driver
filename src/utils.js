@@ -1,4 +1,4 @@
-const { Did, connect } = require('@kiltprotocol/sdk-js');
+const { Did, connect } = require('@proofid/pid-js-lib');
 
 async function getDidViaChain(address) {
   connect();
