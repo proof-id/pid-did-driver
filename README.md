@@ -35,7 +35,7 @@ npm run start:devnet
 - Make a request:
 
 ```bash
-curl -X GET http://localhost:8080/1.0/identifiers/did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx
+curl -X GET http://localhost:8080/1.0/identifiers/did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6
 ```
 
 Expected output: DID Document as JSON:
@@ -44,7 +44,7 @@ Expected output: DID Document as JSON:
 {
   "didDocument": {
     "@context": "https://w3id.org/did/v1",
-    "id": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+    "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
     "service": [
       {
         "type": "PidMessagingService",
@@ -55,35 +55,35 @@ Expected output: DID Document as JSON:
       {
         "type": "Ed25519SignatureAuthentication2018",
         "publicKey": [
-          "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-1"
+          "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-1"
         ]
       }
     ],
     "publicKey": [
       {
-        "id": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-1",
+        "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-1",
         "type": "Ed25519VerificationKey2018",
-        "controller": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+        "controller": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
         "publicKeyHex": "0x2203a7731f1e4362cb21ff3ef7ce79204e1891fc62c4657040753283a00300d8"
       },
       {
-        "id": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-2",
+        "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-2",
         "type": "X25519Salsa20Poly1305Key2018",
-        "controller": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+        "controller": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
         "publicKeyHex": "0xd0a90ed3b87db1ab599bd3cc0c8e0dc7ffcf2347299a6d494567a14f06861952"
       }
     ]
   },
   "resolverMetadata": {
     "duration": 676,
-    "identifier": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+    "identifier": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
     "driverId": "driver-proofid/pid-did-driver",
     "didUrl": {
-      "didUrlString": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+      "didUrlString": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
       "did": {
-        "didString": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+        "didString": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
         "method": "pid",
-        "methodSpecificId": "5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx"
+        "methodSpecificId": "5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6"
       },
       "parametersMap": {},
       "path": ""
@@ -110,7 +110,7 @@ docker logs 16df22cc7c5f
 The container should be running and logs should be visible.
 To query, run (note the port `49160` due to port mapping):
 
-`curl -X GET http://localhost:49160/1.0/identifiers/did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx`
+`curl -X GET http://localhost:49160/1.0/identifiers/did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6`
 
 Expected output: DID Document as JSON:
 
@@ -118,7 +118,7 @@ Expected output: DID Document as JSON:
 {
   "didDocument": {
     "@context": "https://w3id.org/did/v1",
-    "id": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+    "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
     "service": [
       {
         "type": "PidMessagingService",
@@ -129,35 +129,35 @@ Expected output: DID Document as JSON:
       {
         "type": "Ed25519SignatureAuthentication2018",
         "publicKey": [
-          "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-1"
+          "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-1"
         ]
       }
     ],
     "publicKey": [
       {
-        "id": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-1",
+        "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-1",
         "type": "Ed25519VerificationKey2018",
-        "controller": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+        "controller": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
         "publicKeyHex": "0x2203a7731f1e4362cb21ff3ef7ce79204e1891fc62c4657040753283a00300d8"
       },
       {
-        "id": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-2",
+        "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-2",
         "type": "X25519Salsa20Poly1305Key2018",
-        "controller": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+        "controller": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
         "publicKeyHex": "0xd0a90ed3b87db1ab599bd3cc0c8e0dc7ffcf2347299a6d494567a14f06861952"
       }
     ]
   },
   "resolverMetadata": {
     "duration": 676,
-    "identifier": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+    "identifier": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
     "driverId": "driver-proofid/pid-did-driver",
     "didUrl": {
-      "didUrlString": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+      "didUrlString": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
       "did": {
-        "didString": "did:pid:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+        "didString": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
         "method": "pid",
-        "methodSpecificId": "5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx"
+        "methodSpecificId": "5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6"
       },
       "parametersMap": {},
       "path": ""

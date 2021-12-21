@@ -1,5 +1,5 @@
 const express = require('express');
-const { Did, init } = require('@proofid/pid-sdk-lib');
+const { Did, init } = require('@proofid/pid-js-lib');
 const fetch = require('node-fetch');
 const { PORT } = require('./config');
 const { URI_DID } = require('./consts');
