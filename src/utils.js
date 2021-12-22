@@ -2,7 +2,7 @@ const { Did, connect } = require('@proofid/pid-js-lib');
 
 async function getDidViaChain(address) {
   connect();
-  return Did.queryByAddress(address);
+  return Did.DidChain.queryById(address);
 }
 
 function isUrlFetchable(storageLocation) {

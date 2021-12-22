@@ -19,7 +19,7 @@ async function start() {
   driver.get(URI_DID, async function getDidDocument(req, res) {
     const { did } = req.params;
     try {
-      const address = Did.getAddressFromIdentifier(did);
+      const address = await Did.DidChain.queryById(did);
       try {
         let storageLocation = await getDidDocumentStorageLocation(address);
         if (!storageLocation) {
