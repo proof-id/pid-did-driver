@@ -153,12 +153,23 @@ It **must be ensured that the identity operating the update is authorized to do 
 Deactivating a DID can be done by using the ProofID blockchain's `remove` method on a DID.
 This removes the document storage location property, effectively unlinking a DID from its DID Document.
 
-## 4. Security and Privacy considerations
+## 4. Security Considerations
 
-### 4.1. Private key
+This section provides the security consideration for the DID method implementation.
 
-An identity that creates a DID item also effectively controls the associated DID Document.
-Hence the private key for this identity should be kept entirely private.
+* An identity that generates a DID item also has effective control over the DID Document that it is connected with. As a result, the private key associated with this identity should be kept completely confidential.
+* In the event of a compromised key, the participant is required to deactivate any existing DID immediately.
+* The DID controller server SHOULD be set to only handle encryption that are considered to be strong.
+* The DID controller is responsible for storing the private key in a safe location.
+* Instead of writing client apps that directly gather authentication information from users, developers of a DID controller should transfer this work to a trusted system component (for example, the system browser).
+* The DID controller is responsible for ensuring the security of the application architecture. The participant SHOULD include the essential security measures within the application as well as anti-fraud capabilities to protect against fraud.
+* As soon as a mobile application is made available for public distribution, the participant must guarantee that it is obfuscated and signed with a trust certificate, in order for the DID method to be invoked successfully.
+* DID controllers are held accountable for the generation and storage of keys in a safe manner on cryptographic storage devices such as the Hardware Security Module (HSM) in their infrastructure.
+* DID controller is responsible for seeing to it that that the program is frequently tested for security flaws and that no exploitable vulnerabilities are found.
+* The DID controller SHOULD NOT make use of any third-party libraries that are susceptible to attack. The DID controller is responsible for ensuring that the application code has been checked for security vulnerabilities and that there are no exploitable flaws currently open in the system.
+* It is the responsibility of the DID controller to guarantee that its application does not re-use the same cryptographic keys for more than one purpose.
+* The DID controller SHOULD incorporate rate limiting techniques in order to prevent the platform from being overloaded.
+* The DID controller SHOULD put in place security auditing procedures.
 
 ### 4.2. DID Document tampering
 
@@ -168,12 +179,18 @@ If the DID Document has been pregenerated and stored off-chain on a server (Mode
 * The server should verify this signature on create events and update events on the DID Document;
 * Any consumer of the DID Document, such as an entity accessing the off-chain DID Document in order to establish a secure communication channel with the given DID Subject, should verify the signature as well.
 
-### 4.3. Other security and privacy considerations
+## 5. Privacy Considerations
 
-All security and privacy considerations described in the [w3c working draft][w3c-did-core] are relevant in the case of ProofID DIDs, and must be taken into account by applications / system developers making use of ProofID DIDs.
+This section provides the privacy consideration for the DID method implementation.
 
+* A DID document does not include any personal information about the user.
+* The DID controller is responsible for ensuring the integrity and confidentiality of the personal data of users. The DID controller is responsible for ensuring that all relevant privacy and data protection laws, rules, and principles are followed by the DID controller.
+* The DID controller must ensure that the relevant security mechanisms are in place to secure the personal data of users if this is required by law.
+* The DID controller is responsible for ensuring that no personally identifiable information is recorded in any system or application log.
+* If the DID controller determines that the application is storing personal data in temporary memory, the application will be terminated.
+* The DID controller MUST have confidentiality safeguards in place in order to prevent the content of conversations from being monitored.
 
-## 5. SDK
+## 6. SDK
 
 The [ProofID SDK][sdk] is a convenient tool to interact with the ProofID blockchain. There is no technical constraint to use the ProofID SDK to use ProofID DIDs.
 
