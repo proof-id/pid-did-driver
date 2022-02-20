@@ -84,26 +84,26 @@ DID Document:
 {
   "id": "did:pid:<address>",
   "authentication": {
-    "type": "Ed25519SignatureAuthentication2018",
+    "type": "Ed25519VerificationKey2018",
     "publicKey": [
       "did:pid:<address>#key-1"
     ]
   },
-  "publicKey": [
+  "verificationMethod": [
     {
       "id": "did:pid:<address>#key-1",
       "type": "Ed25519VerificationKey2018",
       "controller": "did:pid:<address>",
-      "publicKeyHex": <sign_key>
+      "publicKeyBase58": <sign_key>
     },
     {
       "id": "did:pid:<address>#key-2",
       "type": "X25519Salsa20Poly1305Key2018",
       "controller": "did:pid:<address>",
-      "publicKeyHex": <box_key>
+      "publicKeyBase58": <box_key>
     }
   ],
-  "@context": "https://w3id.org/did/v1",
+  "@context": ["https://www.w3.org/ns/did/v1","https://w3id.org/security/suites/ed25519-2018/v1"],
   "service": [
     {
       "type": "PidMessagingService",

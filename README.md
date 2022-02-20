@@ -40,7 +40,7 @@ Expected output: DID Document as JSON:
 ```json
 {
   "didDocument": {
-    "@context": "https://w3id.org/did/v1",
+    "@context": ["https://www.w3.org/ns/did/v1","https://w3id.org/security/suites/ed25519-2018/v1"],
     "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
     "service": [
       {
@@ -56,12 +56,12 @@ Expected output: DID Document as JSON:
         ]
       }
     ],
-    "publicKey": [
+    "verificationMethod": [
       {
         "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-1",
         "type": "Ed25519VerificationKey2018",
         "controller": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
-        "publicKeyHex": "0x2203a7731f1e4362cb21ff3ef7ce79204e1891fc62c4657040753283a00300d8"
+        "publicKeyBase58": "0x2203a7731f1e4362cb21ff3ef7ce79204e1891fc62c4657040753283a00300d8"
       },
       {
         "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-2",
@@ -114,7 +114,7 @@ Expected output: DID Document as JSON:
 ```json
 {
   "didDocument": {
-    "@context": "https://w3id.org/did/v1",
+    "@context": ["https://www.w3.org/ns/did/v1","https://w3id.org/security/suites/ed25519-2018/v1"],
     "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
     "service": [
       {
@@ -141,7 +141,7 @@ Expected output: DID Document as JSON:
         "id": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6#key-2",
         "type": "X25519Salsa20Poly1305Key2018",
         "controller": "did:pid:5E5CjZhF8iEY2YwAZPnoGBq5bzW3LcZ7WwBnTDUds1bEjBR6",
-        "publicKeyHex": "0xd0a90ed3b87db1ab599bd3cc0c8e0dc7ffcf2347299a6d494567a14f06861952"
+        "publicKeyBase58": "0xd0a90ed3b87db1ab599bd3cc0c8e0dc7ffcf2347299a6d494567a14f06861952"
       }
     ]
   },
